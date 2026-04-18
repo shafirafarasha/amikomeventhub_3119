@@ -3,8 +3,7 @@ NIM: 24.12.3119
 
 link cloud laravel :  https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/
 
-TUGAS 1 : kontak = 
-          profile = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/profil
+TUGAS 1 : profile = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/profil
           bantuan = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/bantuan
           katalog = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/katalog
           
