@@ -43,10 +43,17 @@ Route::get('/admin/events', [EventController::class, 'index'])
 */
 Route::get('/admin/transactions', function () {
     return view('admin.transactions');
-})->name('admin.transactions');
+})->name('admin.transactions.index');
 
 /*
 | Categories Admin
 */
 Route::get('/admin/categories', [CategoryController::class, 'index'])
     ->name('admin.categories.index');
+
+
+use App\Http\Controllers\Admin\EventController as EventAdminController;
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('events', EventAdminController::class);
+});
