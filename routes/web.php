@@ -32,6 +32,12 @@ Route::get('/my-ticket', [EventController::class, 'ticket'])->name('ticket');
 Route::get('/admin', [DashboardController::class, 'index'])
     ->name('admin.dashboard');
 
+/*
+| Events Admin
+*/
+Route::get('/admin/events', [EventController::class, 'index'])
+    ->name('admin.events.index');
+
 
 
 /*
