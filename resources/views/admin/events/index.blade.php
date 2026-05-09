@@ -43,7 +43,7 @@ font-black tracking-widest">
                             <td class="px-8 py-6">
                                 <p class="font-black text-slate-800">{{ $event->title }}</p>
 
-                                <p class="text-xs text-slate-400">{{ $event->category->name ?? '-' }} • {{ $event->date }}
+                                <p class="text-xs text-slate-400">{{ $event->category?->name ?? '-' }} • {{ $event->date }}
                                 </p>
 
                             </td>
