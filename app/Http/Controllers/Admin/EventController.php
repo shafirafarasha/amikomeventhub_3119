@@ -13,9 +13,7 @@ class EventController extends Controller
      */
     public function index()
     {
-           // Memakai relasi dan pengaturan limit paginasi (10 entri per halaman)
-       $events = \App\Models\Event::latest()->paginate(10);
-        return view('admin.events.index', compact('events'));
+        return 'ADMIN EVENTS OK';
     }
 
     /**
