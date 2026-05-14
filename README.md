@@ -1,20 +1,23 @@
 Nama: Shafira Andien Farasha  
-NIM: 24.12.3119
+NIM: 24.12.3119  
 
-Tugas 1 : link cloud laravel =  https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/
+## Tugas 1
+- Cloud Laravel: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/
 
-TUGAS 2 : profile = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/profil
-          bantuan = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/bantuan
-          katalog = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/katalog
-          
+## Tugas 2
+- Profil: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/profil  
+- Bantuan: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/bantuan  
+- Katalog: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/katalog  
 
-TUGAS 3 : index = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/
-          event detail = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/event
-          checkout = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/checkout 
-          ticket = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/my-ticket
-          admin dashboard = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/admin
-          admin event = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/admin/events
-          admin transactions = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/admin/transactions
-          admin category = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/admin/categories
+## Tugas 3
+- Index: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/  
+- Event Detail: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/event  
+- Checkout: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/checkout  
+- Ticket: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/my-ticket  
+- Admin Dashboard: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/admin  
+- Admin Event: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/admin/events  
+- Admin Transactions: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/admin/transactions  
+- Admin Category: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/admin/categories  
 
-Tugas 4 : crud admin event = https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/admin/events
+## Tugas 4
+- CRUD Admin Event: https://amikomeventhub-3119-main-ab6usa.free.laravel.cloud/admin/events
