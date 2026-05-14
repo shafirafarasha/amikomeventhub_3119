@@ -12,7 +12,8 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
-        \App\Models\User::firstOrCreate(
+        // 1. Admin
+        User::firstOrCreate(
             ['email' => 'admin@amikom.ac.id'],
             [
                 'name' => 'Admin Amikom',
@@ -21,7 +22,17 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        // 2. Kategori
+        // 2. User Test
+        User::firstOrCreate(
+            ['email' => 'test@example.com'],
+            [
+                'name' => 'Test User',
+                'password' => bcrypt('password'),
+                'role' => 'user',
+            ]
+        );
+
+        // 3. Categories
         $seminar = \App\Models\Category::firstOrCreate(
             ['slug' => 'seminar-it'],
             ['name' => 'Seminar IT']
@@ -37,81 +48,87 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Olahraga & Kompetisi']
         );
 
-        // 3. Events
+        // 4. Events
 
         // Entertainment
-        \App\Models\Event::create([
-            'category_id' => $entertainment->id,
-            'title' => 'Jazz Night 2026',
-            'description' => 'Nikmati malam santai dengan alunan musik jazz.',
-            'date' => '2026-05-10 19:00:00',
-            'location' => 'Amikom Baru',
-            'price' => 50000,
-            'stock' => 100,
-            'poster_path' => 'posters/event-1.png',
-        ]);
+        \App\Models\Event::firstOrCreate(
+            ['title' => 'Jazz Night 2026'],
+            [
+                'category_id' => $entertainment->id,
+                'description' => 'Nikmati malam santai dengan alunan musik jazz.',
+                'date' => '2026-05-10 19:00:00',
+                'location' => 'Amikom Baru',
+                'price' => 50000,
+                'stock' => 100,
+                'poster_path' => 'posters/event-1.png',
+            ]
+        );
 
-        \App\Models\Event::create([
-            'category_id' => $entertainment->id,
-            'title' => 'Campus Movie Festival',
-            'description' => 'Festival film karya mahasiswa terbaik.',
-            'date' => '2026-05-15 18:30:00',
-            'location' => 'Cinema Unit 6',
-            'price' => 30000,
-            'stock' => 80,
-            'poster_path' => 'posters/event-4.png',
-        ]);
+        \App\Models\Event::firstOrCreate(
+            ['title' => 'Campus Movie Festival'],
+            [
+                'category_id' => $entertainment->id,
+                'description' => 'Festival film karya mahasiswa terbaik.',
+                'date' => '2026-05-15 18:30:00',
+                'location' => 'Cinema Unit 6',
+                'price' => 30000,
+                'stock' => 80,
+                'poster_path' => 'posters/event-4.png',
+            ]
+        );
 
-        //  Seminar IT
-        \App\Models\Event::create([
-            'category_id' => $seminar->id,
-            'title' => 'Hackathon - Unleash Your Inner Developer',
-            'description' => 'Kompetisi coding untuk menciptakan solusi inovatif.',
-            'date' => '2026-05-05 10:00:00',
-            'location' => 'Inkubator Amikom',
-            'price' => 50000,
-            'stock' => 100,
-            'poster_path' => 'posters/event-2.png',
-        ]);
+        // Seminar IT
+        \App\Models\Event::firstOrCreate(
+            ['title' => 'Hackathon - Unleash Your Inner Developer'],
+            [
+                'category_id' => $seminar->id,
+                'description' => 'Kompetisi coding untuk menciptakan solusi inovatif.',
+                'date' => '2026-05-05 10:00:00',
+                'location' => 'Inkubator Amikom',
+                'price' => 50000,
+                'stock' => 100,
+                'poster_path' => 'posters/event-2.png',
+            ]
+        );
 
-        \App\Models\Event::create([
-            'category_id' => $seminar->id,
-            'title' => 'AI & Future Tech Summit 2026',
-            'description' => 'Eksplorasi tren AI dan teknologi masa depan.',
-            'date' => '2026-05-01 13:00:00',
-            'location' => 'Cinema Unit 6',
-            'price' => 50000,
-            'stock' => 100,
-            'poster_path' => 'posters/event-3.png',
-        ]);
+        \App\Models\Event::firstOrCreate(
+            ['title' => 'AI & Future Tech Summit 2026'],
+            [
+                'category_id' => $seminar->id,
+                'description' => 'Eksplorasi tren AI dan teknologi masa depan.',
+                'date' => '2026-05-01 13:00:00',
+                'location' => 'Cinema Unit 6',
+                'price' => 50000,
+                'stock' => 100,
+                'poster_path' => 'posters/event-3.png',
+            ]
+        );
 
-        //  Olahraga & Kompetisi
-        \App\Models\Event::create([
-            'category_id' => $sport->id,
-            'title' => 'E-Sport U-Champ Tournament',
-            'description' => 'Turnamen e-sport antar mahasiswa.',
-            'date' => '2026-05-20 09:00:00',
-            'location' => 'Hall Amikom',
-            'price' => 25000,
-            'stock' => 120,
-            'poster_path' => 'posters/event-5.png',
-        ]);
+        // Sport
+        \App\Models\Event::firstOrCreate(
+            ['title' => 'E-Sport U-Champ Tournament'],
+            [
+                'category_id' => $sport->id,
+                'description' => 'Turnamen e-sport antar mahasiswa.',
+                'date' => '2026-05-20 09:00:00',
+                'location' => 'Hall Amikom',
+                'price' => 25000,
+                'stock' => 120,
+                'poster_path' => 'posters/event-5.png',
+            ]
+        );
 
-        \App\Models\Event::create([
-            'category_id' => $sport->id,
-            'title' => 'Fun Run 5K Amikom',
-            'description' => 'Lari santai 5KM untuk kesehatan dan kebersamaan.',
-            'date' => '2026-05-25 06:00:00',
-            'location' => 'Lapangan Kampus',
-            'price' => 20000,
-            'stock' => 150,
-            'poster_path' => 'posters/event-6.png',
-        ]);
-
-        // 4. User tambahan
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        \App\Models\Event::firstOrCreate(
+            ['title' => 'Fun Run 5K Amikom'],
+            [
+                'category_id' => $sport->id,
+                'description' => 'Lari santai 5KM untuk kesehatan dan kebersamaan.',
+                'date' => '2026-05-25 06:00:00',
+                'location' => 'Lapangan Kampus',
+                'price' => 20000,
+                'stock' => 150,
+                'poster_path' => 'posters/event-6.png',
+            ]
+        );
     }
 }
