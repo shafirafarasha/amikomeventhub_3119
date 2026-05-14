@@ -37,8 +37,8 @@ font-black tracking-widest">
                             <td class="px-8 py-6 font-bold text-slate-400">{{ $events->firstItem() + $index }}</td>
                             <td class="px-8 py-6">
 
-                                <img src="{{ $event->poster_path ? asset($event->poster_path) : 'https://placehold.co/160x200' }}"
-                                    class="w-16 h-20 rounded-xl object-cover shadow-sm">
+                                <img src="{{ $event->poster_path ? asset('storage/' . $event->poster_path) : 'https://placehold.co/160x200' }}"
+     class="w-16 h-20 rounded-xl object-cover shadow-sm">
                             </td>
                             <td class="px-8 py-6">
                                 <p class="font-black text-slate-800">{{ $event->title }}</p>
