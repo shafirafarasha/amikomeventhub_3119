@@ -60,7 +60,7 @@ class DatabaseSeeder extends Seeder
                 'location' => 'Amikom Baru',
                 'price' => 50000,
                 'stock' => 100,
-                'poster_path' => 'storage/posters/event-1.png',
+                'poster_path' => 'posters/event-1.png',
             ]
         );
 
@@ -73,7 +73,7 @@ class DatabaseSeeder extends Seeder
                 'location' => 'Cinema Unit 6',
                 'price' => 30000,
                 'stock' => 80,
-                'poster_path' => 'storage/posters/event-4.png',
+                'poster_path' => 'posters/event-4.png',
             ]
         );
 
@@ -87,7 +87,7 @@ class DatabaseSeeder extends Seeder
                 'location' => 'Inkubator Amikom',
                 'price' => 50000,
                 'stock' => 100,
-                'poster_path' => 'storage/posters/event-2.png',
+                'poster_path' => 'posters/event-2.png',
             ]
         );
 
@@ -100,7 +100,7 @@ class DatabaseSeeder extends Seeder
                 'location' => 'Cinema Unit 6',
                 'price' => 50000,
                 'stock' => 100,
-                'poster_path' => 'storage/posters/event-3.png',
+                'poster_path' => 'posters/event-3.png',
             ]
         );
 
@@ -114,7 +114,7 @@ class DatabaseSeeder extends Seeder
                 'location' => 'Hall Amikom',
                 'price' => 25000,
                 'stock' => 120,
-                'poster_path' => 'storage/posters/event-5.png',
+                'poster_path' => 'posters/event-5.png',
             ]
         );
 
@@ -127,7 +127,7 @@ class DatabaseSeeder extends Seeder
                 'location' => 'Lapangan Kampus',
                 'price' => 20000,
                 'stock' => 150,
-                'poster_path' => 'storageposters/event-6.png',
+                'poster_path' => 'posters/event-6.png',
             ]
         );
     }
