@@ -22,10 +22,12 @@ class DatabaseSeeder extends Seeder
 );
 
         // 2. Kategori
-        $seminar = \App\Models\Category::create([
-            'name' => 'Seminar IT',
-            'slug' => 'seminar-it',
-        ]);
+       $seminar = \App\Models\Category::firstOrCreate(
+    ['slug' => 'seminar-it'],
+    [
+        'name' => 'Seminar IT',
+    ]
+);
 
         $entertainment = \App\Models\Category::create([
             'name' => 'Entertainment',
