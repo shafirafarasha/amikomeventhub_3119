@@ -12,32 +12,30 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
-       \App\Models\User::firstOrCreate(
-    ['email' => 'admin@amikom.ac.id'],
-    [
-        'name' => 'Admin Amikom',
-        'password' => bcrypt('password'),
-        'role' => 'admin',
-    ]
-);
+        \App\Models\User::firstOrCreate(
+            ['email' => 'admin@amikom.ac.id'],
+            [
+                'name' => 'Admin Amikom',
+                'password' => bcrypt('password'),
+                'role' => 'admin',
+            ]
+        );
 
         // 2. Kategori
-       $seminar = \App\Models\Category::firstOrCreate(
-    ['slug' => 'seminar-it'],
-    [
-        'name' => 'Seminar IT',
-    ]
-);
+        $seminar = \App\Models\Category::firstOrCreate(
+            ['slug' => 'seminar-it'],
+            ['name' => 'Seminar IT']
+        );
 
-        $entertainment = \App\Models\Category::create([
-            'name' => 'Entertainment',
-            'slug' => 'entertainment',
-        ]);
+        $entertainment = \App\Models\Category::firstOrCreate(
+            ['slug' => 'entertainment'],
+            ['name' => 'Entertainment']
+        );
 
-        $sport = \App\Models\Category::create([
-            'name' => 'Olahraga & Kompetisi',
-            'slug' => 'olahraga-kompetisi',
-        ]);
+        $sport = \App\Models\Category::firstOrCreate(
+            ['slug' => 'olahraga-kompetisi'],
+            ['name' => 'Olahraga & Kompetisi']
+        );
 
         // 3. Events
 
