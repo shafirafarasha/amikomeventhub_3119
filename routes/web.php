@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\PartnerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ Route::get('/my-ticket', [EventController::class, 'ticket'])->name('ticket');
 |--------------------------------------------------------------------------
 */
 
-// DASHBOARD (sesuai permintaan kamu: /dashboard)
+// DASHBOARD ( /dashboard)
 Route::get('/admin', [DashboardController::class, 'index'])
     ->name('admin.dashboard');
 
@@ -50,9 +51,22 @@ Route::get('/admin/transactions', function () {
 /*
 | Categories Admin
 */
-Route::get('/admin/categories', [CategoryController::class, 'index'])
-    ->name('admin.categories.index');
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+    Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
+    Route::put('/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
+    Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+});
 
+/*
+| Partners Admin
+*/
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/partners', [PartnerController::class, 'index'])->name('partners.index');
+    Route::post('/partners', [PartnerController::class, 'store'])->name('partners.store');
+    Route::put('/partners/{id}', [PartnerController::class, 'update'])->name('partners.update');
+    Route::delete('/partners/{id}', [PartnerController::class, 'destroy'])->name('partners.destroy');
+});
 
 use App\Http\Controllers\Admin\EventController as EventAdminController;
 

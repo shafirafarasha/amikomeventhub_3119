@@ -47,6 +47,33 @@
         @yield('content')
     </main>
 
+    <!--partners-->
+    @if (request()->path() == '/')
+
+<div class="mt-12 w-full max-w-4xl mx-auto">
+    <h2 class="text-xl font-bold text-center mb-6">
+        Partner AmikomEventHub
+    </h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        @foreach ($partners as $partner)
+            <div class="bg-white p-4 rounded shadow text-center">
+
+               <img src="{{ asset('storage/' . $partner->logo_url) }}"
+    alt="{{ $partner->name }}"
+    class="h-14 mx-auto mb-2 object-contain">
+
+                <p class="text-sm">
+                    {{ $partner->name }}
+                </p>
+
+            </div>
+        @endforeach
+    </div>
+</div>
+
+@endif
+
     <!-- Footer -->
     <footer class="bg-indigo-900 text-indigo-100 py-20 px-6 mt-20">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
