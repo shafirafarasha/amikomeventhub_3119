@@ -24,5 +24,37 @@
         </div>
     </div>
 
+<section class="py-16">
+    <div class="container mx-auto px-4">
+
+        <h2 class="text-3xl font-bold text-center mb-10">
+            Partner Kami
+        </h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            @foreach($partners as $partner)
+                <div class="bg-white shadow rounded-lg p-4 text-center">
+
+                    @if($partner->logo)
+                        <img src="{{ asset('storage/' . $partner->logo) }}"
+                             alt="{{ $partner->name }}"
+                             class="h-24 mx-auto object-contain">
+                    @else
+                        <div class="h-24 flex items-center justify-center text-gray-400">
+                            No Logo
+                        </div>
+                    @endif
+
+                    <h3 class="mt-3 font-semibold">
+                        {{ $partner->name }}
+                    </h3>
+
+                </div>
+            @endforeach
+        </div>
+
+    </div>
+</section>
+
 </body>
 </html>

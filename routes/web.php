@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TransactionController;
+use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\Admin\EventController as EventAdminController;
 
 /*
@@ -57,5 +59,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::get('/categories', [CategoryController::class, 'index'])
             ->name('categories.index');
+
+        Route::resource('partners', PartnerController::class);
+
+        Route::get('/checkout/{event}', [CheckoutController::class, 'create'])
+            ->name('checkout.create');
+
+        Route::post('/checkout/{event}', [CheckoutController::class, 'store'])
+            ->name('checkout.store');
     });
 });
