@@ -62,10 +62,17 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::resource('partners', PartnerController::class);
 
-        Route::get('/checkout/{event}', [CheckoutController::class, 'create'])
+
+
+
+    });
+
+});
+
+    Route::get('/checkout/{event}', [CheckoutController::class, 'create'])
             ->name('checkout.create');
 
         Route::post('/checkout/{event}', [CheckoutController::class, 'store'])
             ->name('checkout.store');
-    });
-});
+ Route::get('/payment/{order_id}', [CheckoutController::class, 'payment'])
+            ->name('checkout.payment');
